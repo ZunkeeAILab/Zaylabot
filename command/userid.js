@@ -6,13 +6,13 @@ const userPath = path.join(__dirname, '../data/user.json');
 if (!fs.existsSync(userPath)) fs.writeFileSync(userPath, JSON.stringify([]));
 
 const jenisUser = {
-  biasa: 'ZFR',
-  premium: 'ZUP',
-  admin: 'ZMN',
-  owner: 'ZWN',
-  penyewa: 'ZSW',
-  pengawas: 'ZAP',
-  sementara: 'ZMP'
+  biasa: 'ZUSR',
+  premium: 'ZPRE',
+  admin: 'ZADM',
+  owner: 'ZOWN',
+  penyewa: 'ZSWA',
+  pengawas: 'ZDEV',
+  sementara: 'ZTMP'
 };
 
 // Fungsi buat ID unik berdasarkan tipe user
@@ -116,9 +116,9 @@ function confirmSewaFromTemporary(tempId, nama, asal) {
 }
 
 module.exports = {
-  genID,
+  generateID,
   getUser,
   addUser,
-  upzrium,
-  csftnow
+  upgradeToPremium,
+  confirmSewaFromTemporary
 };
